@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather Station </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="{% static "assets/js/ie/html5shiv.js"%}"></script><![endif]-->
+    <link rel="stylesheet" href="{%  static "assets/css/main.css" %}"/>
+    <!--[if lte IE 8]><link rel="stylesheet" href="{% static "assets/css/ie8.css" %}"/><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{% static "assets/css/ie9.css" %}"/><![endif]-->
+</head>
+<body>
+<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<h1>Weather Station <img src="{{ data.icon_url }}"/></h1>
+
+				</header>
+                <footer>
+                    <ul>
+                        <li>Location - {{ data.location }}</li>
+                        <li>Weather - {{ data.weather }}</li>
+
+                        <li>Wind_str - {{ data.wind_str }}</li>
+                        <li>Temperature - {{ data.temp }}</li>
+                        <li>Humidity - {{ data.humidity}}</li>
+                        <li>Precip - {{ data.precip }}</li>
+
+                        <li>{{ data.observation_time }}</li>
+                    </ul>
+                </footer>
+			</section>
+
+<!-- Scripts -->
+			<script src="{% static "assets/js/jquery.min.js"%}"></script>
+			<script src="{% static "assets/js/jquery.scrolly.min.js"%}"></script>
+			<script src="{% static "assets/js/skel.min.js"%}"></script>
+			<script src="{% static "assets/js/util.js"%}"></script>
+			<!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js"%}"></script><![endif]-->
+			<script src="{% static "assets/js/main.js"%}"></script>
+</body>
+</html>
