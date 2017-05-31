@@ -20,10 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xnym-9nmyo=vzu!@cr=0gu&!dn_7!cjd((ryp%3%6&15jr@96*'
+#SECRET_KEY = 'xnym-9nmyo=vzu!@cr=0gu&!dn_7!cjd((ryp%3%6&15jr@96*'
+SECRET_KEY = config('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -75,7 +78,7 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'weather',
@@ -84,6 +87,11 @@ DATABASES = {
         'HOST': '',
         'PORT':''
     }
+}'''
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 
 
