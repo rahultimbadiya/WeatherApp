@@ -26,7 +26,7 @@ SECRET_KEY = 'xnym-9nmyo=vzu!@cr=0gu&!dn_7!cjd((ryp%3%6&15jr@96*'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
@@ -91,8 +91,7 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 }'''
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+        default='postgres://fedaqxzimjehyk:288a3b35fb7a475721ef072e060424a1ca9d8457693f46ad806c91ae1ab3b68e@ec2-50-19-219-69.compute-1.amazonaws.com:5432/d2jmsua6bd4lve')
 }
 
 
