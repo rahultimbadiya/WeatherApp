@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 }'''
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://fedaqxzimjehyk:288a3b35fb7a475721ef072e060424a1ca9d8457693f46ad806c91ae1ab3b68e@ec2-50-19-219-69.compute-1.amazonaws.com:5432/d2jmsua6bd4lve')
+        default=os.environ["HEROKU_POSTGRESQL_PINK_URL"])
 }
 
 
