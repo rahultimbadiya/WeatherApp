@@ -94,7 +94,7 @@ DATABASES = {
 '''
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ["HEROKU_POSTGRESQL_AMBER_URL"])
+        default=config("HEROKU_POSTGRESQL_AMBER_URL"))
 }
 
 
