@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'weather',
-        'USER': 'postgres',
-        'PASSWORD': 'root@123',
+        'NAME': 'd6k68qn1mkl8r9',
+        'USER': 'skfijtpotyvbzj',
+        'PASSWORD': 'c8fefb9c3799121ea3dae6e72fdf2829bade1e5514b9cfbb9be9b01081074db3',
 	
-        'HOST': 'localhost',
+        'HOST': 'ec2-54-83-26-65.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
@@ -96,7 +96,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.environ["HEROKU_POSTGRESQL_AMBER_URL"])
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
