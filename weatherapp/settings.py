@@ -29,7 +29,7 @@ SECRET_KEY = 'xnym-9nmyo=vzu!@cr=0gu&!dn_7!cjd((ryp%3%6&15jr@96*'
 DEBUG = True
 #DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.01','localhost','weatherapp2017.herokuapp.com']
+ALLOWED_HOSTS = ['weatherapp2017.herokuapp.com','127.0.0.1','localhost']
 #ALLOWED_HOSTS =[]
 
 
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -90,11 +90,12 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT':'5432',
     }
-}'''
+}
+'''
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ["HEROKU_POSTGRESQL_AMBER_URL"])
-}
+}'''
 
 
 # Password validation
