@@ -30,6 +30,7 @@ DEBUG = True
 #DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['127.0.01','localhost','weatherapp2017.herokuapp.com']
+#ALLOWED_HOSTS =[]
 
 
 # Application definition
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'station.apps.StationConfig',
+    'station',
 ]
 
 MIDDLEWARE = [
@@ -78,15 +79,16 @@ WSGI_APPLICATION = 'weatherapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-'''DATABASES = {
+'''
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'weather',
         'USER': 'postgres',
         'PASSWORD': 'root@123',
-        'HOST': '',
-        'PORT':''
+	
+        'HOST': 'localhost',
+        'PORT':'',
     }
 }'''
 DATABASES = {
@@ -136,11 +138,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+#STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
