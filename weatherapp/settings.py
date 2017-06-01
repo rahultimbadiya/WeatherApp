@@ -29,7 +29,7 @@ SECRET_KEY = 'xnym-9nmyo=vzu!@cr=0gu&!dn_7!cjd((ryp%3%6&15jr@96*'
 DEBUG = True
 #DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.01','localhost','weatherapp2017.herokuapp.com']
 
 
 # Application definition
