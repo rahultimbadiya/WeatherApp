@@ -17,8 +17,6 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -62,12 +60,11 @@ ROOT_URLCONF = 'weatherapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [os.path.join(PROJECT_ROOT, 'templates')]
-=======
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
->>>>>>> a8b93a492566eed6078afaf9fd4454317486d750
-        ,
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
+
+        #'DIRS': [os.path.join(BASE_DIR, 'templates')]
+
+        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,10 +89,6 @@ DATABASES = {
         'NAME': 'd6k68qn1mkl8r9',
         'USER': 'skfijtpotyvbzj',
         'PASSWORD': 'c8fefb9c3799121ea3dae6e72fdf2829bade1e5514b9cfbb9be9b01081074db3',
-<<<<<<< HEAD
-=======
-	
->>>>>>> a8b93a492566eed6078afaf9fd4454317486d750
         'HOST': 'ec2-54-83-26-65.compute-1.amazonaws.com',
         'PORT':'5432',
     }
