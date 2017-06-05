@@ -15,10 +15,11 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
+<<<<<<< HEAD
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+=======
 
+>>>>>>> a8b93a492566eed6078afaf9fd4454317486d750
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
